@@ -7,5 +7,6 @@ public interface Player {
 
     void drawCard(StandardCard card);
     void SetupHand();
+    String get();
 
     }

@@ -143,6 +143,9 @@ public class Deck{
         CardDeck = new ArrayList<>();
         SetupDeck();
     }
+    public StandardCard getCard(int number){
+        return CardDeck.get(number);
+    }
 
     public StandardCard Draw(){
         return CardDeck.remove(0);
@@ -151,7 +154,6 @@ public class Deck{
     public void Shuffle(){
         Collections.shuffle(CardDeck);
     }
-
     public int Size(){
         int size = CardDeck.size();
         return size;

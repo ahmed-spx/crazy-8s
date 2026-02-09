@@ -7,7 +7,7 @@ import java.util.List;
 
 abstract class PlayerBase implements Player {
 
-    private List<StandardCard> Hand;
+    protected List<StandardCard> Hand;
     @Override
     public void SetupHand(){
         Hand = new ArrayList<>();
@@ -20,4 +20,5 @@ abstract class PlayerBase implements Player {
     public void drawCard(StandardCard card){
         Hand.add(card);
     }
+
 }
