@@ -1,14 +1,23 @@
 package main.java.edu.kennesaw.crazy8s.game;
 
 import main.java.edu.kennesaw.crazy8s.cardDeck.Deck;
+import main.java.edu.kennesaw.crazy8s.cards.StandardCard;
 import main.java.edu.kennesaw.crazy8s.player.Player;
 
 import java.util.Scanner;
 
 public class CrazyEightsGame {
 
+    protected Deck deck;
+    protected Player humanPlayer;
+    protected Player cpuPlayer;
     public CrazyEightsGame(Deck deck, Player humanPlayer, Player cpuPlayer){
-        //initializes deck and hands lists
+        //initialize protected deck and players
+        this.deck = deck;
+        this.humanPlayer = humanPlayer;
+        this.cpuPlayer = cpuPlayer;
+
+        //shuffles deck and sets up hands' lists
         deck.Shuffle();
         humanPlayer.SetupHand();
         cpuPlayer.SetupHand();
@@ -27,7 +36,6 @@ public class CrazyEightsGame {
         cpuPlayer.drawCard(deck.Draw());
         cpuPlayer.drawCard(deck.Draw());
 
-        //call TurnAction and give first card from deck at target card
     }
 
     public void run() {
@@ -36,10 +44,16 @@ public class CrazyEightsGame {
         String name = "Ahmed";
         System.out.print(name);
 
+        //Game header
         System.out.println("==================================================\n" +
                            "Crazy Eights (Simplified)\n" +
                            "==================================================\n");
 
-        //how do I call the deck here?
+        //Starting the game with the first discard
+        StandardCard startingCard = deck.Draw();
+        System.out.println("Starting discard: " + startingCard.getCard());
+
+        //how do I get the turn to work?
+        //new TurnAction(deck, startingCard, humanPlayer);
     }
 }
