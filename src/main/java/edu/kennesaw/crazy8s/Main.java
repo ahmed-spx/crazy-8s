@@ -13,7 +13,7 @@ public class Main {
 
         Deck deck = new Deck();
         CrazyEightsGame game = new CrazyEightsGame(deck, human, cpu);
-        //game.run();
+        game.run();
 
     }
 }

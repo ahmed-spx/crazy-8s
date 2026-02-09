@@ -151,4 +151,9 @@ public class Deck{
     public void Shuffle(){
         Collections.shuffle(CardDeck);
     }
+
+    public int Size(){
+        int size = CardDeck.size();
+        return size;
+    }
 }
