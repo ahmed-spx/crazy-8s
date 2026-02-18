@@ -1,8 +1,5 @@
 package main.java.edu.kennesaw.crazy8s.domain;
 
-import main.java.edu.kennesaw.crazy8s.cards.StandardCard;
-import main.java.edu.kennesaw.crazy8s.cardDeck.Deck;
-
 public class Rank {
 
     enum rankType{
@@ -19,9 +16,6 @@ public class Rank {
         Queen,
         King,
         Ace
-    }
-    public void aceType(){
-
     }
     //scan first word of card? KingOfThree == KingOfNine?
     /*
