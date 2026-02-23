@@ -21,4 +21,7 @@ abstract class PlayerBase implements Player {
         Hand.add(card);
     }
 
+    //peek hand
+    //taketurn
+
 }
